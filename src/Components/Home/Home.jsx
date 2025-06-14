@@ -49,10 +49,10 @@ const Home = () => {
 							className="product-card-link"
 						>
 							<div className="product-card">
-								<img src={product.thumbnail} alt={product.title} />
-								<h3 style={{ color: "#333" }}>{product.title}</h3>
-								<p style={{ color: "#222" }}>⭐ {product.rating}</p>
-								<p style={{ display: "flex", gap: "1rem" }}>
+								<img className="product-img" src={product.thumbnail} alt={product.title} />
+								<h3 className="product-title" style={{ color: "#333" }}>{product.title}</h3>
+								<p className="product-rating" style={{ color: "#222" }}>⭐ {product.rating}</p>
+								<p className="product-price" style={{ display: "flex", gap: "1rem" }}>
 									<span
 										style={{ textDecoration: "line-through", color: "gray" }}
 									>
@@ -72,6 +72,7 @@ const Home = () => {
 								</p>
 
 								<button
+									className="add-to-cart-button"
 									onClick={(e) => {
 										e.preventDefault();
 										addToCart(product);

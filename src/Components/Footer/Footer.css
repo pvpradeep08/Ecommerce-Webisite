@@ -72,18 +72,37 @@
 
 /* ✅ Responsive - stack to 4 rows on small screens */
 @media (max-width: 768px) {
-  .footer-container {
-    flex-direction: column;
-    padding: 20px;
-    gap: 30px;
-  }
+
 
   .footer-column {
-    min-width: 100%;
+    min-width: 33%;
     margin: 0;
+
   }
 
   .icon-group {
     justify-content: flex-start;
+  }
+}
+
+/* ✅ Responsive - stack to 2 rows on even smaller screens */
+@media (max-width: 480px) {
+
+  .footer-title {
+    font-size: 15px;
+  }
+
+  .footer-container .footer-office {
+    font-size: 12px;
+  }
+
+  .footer-container .footer-column-first p {
+    font-size: 10px;
+  }
+
+  .footer-column {
+    max-width: 50%;
+    margin: 0;
+    flex-wrap: wrap;
   }
 }
